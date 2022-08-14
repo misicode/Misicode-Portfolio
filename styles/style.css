@@ -1,0 +1,1010 @@
+/*==============================================
+  CSS INDEX
+  01. GENERAL CSS
+  02. HEADER CSS
+  03. WELCOME BLOCK CSS
+  04. ABOUT ME BLOCK CSS
+  05. SKILLS BLOCK CSS
+  06. EDUCATION BLOCK CSS
+  07. EXPERIENCE BLOCK CSS
+  08. PROJECTS BLOCK CSS
+  09. CONTACT BLOCK CSS
+================================================*/
+
+:root {
+  --color-primary: #8d64e5;
+	--color-secondary: #63519d;
+  --color-auxiliar: rgba(250, 250, 250, 0.25);
+  --back-primary: #1E1B32;
+  --back-secondary: #2e2b48;
+  --back-auxiliar: rgb(46, 43, 72, 0.75);
+  --gray: #bcbcbc;
+  --white: #fff;
+  --black: #222;
+
+  --font-primary: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+}
+
+
+/*==============================================
+  01. GENERAL CSS
+================================================*/
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smooth: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  -ms-overflow-style: scrollbar;
+}
+body {
+  color: var(--white);
+  font: var(--font-primary);
+  text-align: center;
+  background: var(--black);
+}
+
+.alltrans,
+.owl-nav > button,
+.owl-nav > button:after,
+.counter-box,
+.about-img:after,
+.gallery-img img,
+.form-control,
+.owl-dot,
+.subscribe-row,
+.close-btn,
+.close-btn:before,
+.close-btn:after,
+.tag-btn,
+.btn {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--white);
+  outline: none;
+  text-decoration: underline;
+}
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+  a:active {
+    background-color: transparent;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+h1,
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+h5 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+h6 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+img {
+  border: 0;
+  max-width: 100%;
+}
+p {
+  margin: 0 0 20px;
+}
+.no-margin {
+  margin: 0 !important;
+}
+figure {
+  margin: 0;
+}
+.opacity-no {
+  opacity: 1 !important;
+}
+video {
+  position: fixed;
+  right: -70px;
+  bottom: 0;
+  max-height: 100%;
+}
+/*video {
+  position: fixed;
+  right: -200px;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}*/
+#app:after {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0.75;
+  background: var(--back-primary); /* Old browsers */
+  background: -moz-linear-gradient(top, var(--back-primary) 0%, var(--back-secondary) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, var(--back-primary) 0%,var(--back-secondary) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, var(--back-primary) 0%,var(--back-secondary) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--back-primary), endColorstr=var(--back-secondary), GradientType=0 ); /* IE6-9 */
+}
+.wrapper-background-dark:after {
+  background: #222;
+  opacity: 0.95;
+}
+.section-inner {
+  padding: 20px 30px 0;
+}
+.fp-scrollable {
+  height: calc(100vh - 200px) !important;
+}
+#fp-nav ul li a span {
+ display: none;
+}
+.btn {
+  background: var(--white);
+  color: var(--back-primary);
+  text-align: center;
+  line-height:52px;
+  padding:0 35px;
+  border-radius: 0px;
+  text-transform:uppercase;
+  font-weight:600;
+  border:2px solid transparent;
+  border-radius: 10px;
+}
+.btn:hover, .btn:focus {
+  color:var(--white);
+  border-color:var(--white);
+  background:none;
+}
+.btn:focus {
+  box-shadow:none;
+  outline:none;
+}
+.btn.btn-xs {
+  line-height:34px;
+  font-size:12px;
+  padding:0 20px;
+  font-weight: 500;
+}
+.btn.btn-outline {
+  background:none;
+  border-color:var(--white);
+  color:var(--white);
+  border-width:1px;
+}
+.btn.btn-outline:hover, .btn.btn-outline:focus {
+  background:var(--white);
+  color: var(--back-primary);
+}
+.btn.btn-dark {
+  color: var(--back-primary);
+  border-color: #222;
+}
+.btn.btn-dark:hover, .btn.btn-dark:focus {
+  background: #222;
+  color: var(--white);
+}
+.owl-carousel .owl-stage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.owl-carousel .owl-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1 0 auto;
+}
+.preloader {
+  background: -moz-linear-gradient(top, var(--back-primary) 0%, var(--back-secondary) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, var(--back-primary) 0%,var(--back-secondary) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, var(--back-primary) 0%,var(--back-secondary) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--back-primary), endColorstr=var(--back-secondary), GradientType=0 ); /* IE6-9 */
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  text-align: center;
+}
+.preloader-bounce {
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+}
+.preloader-bounce > span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0.3em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: bounce 0.6s infinite alternate;
+  animation: bounce 0.6s infinite alternate;
+  background: var(--white);
+}
+.preloader-bounce > span:nth-child(2){
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  background: var(--white);
+}
+.preloader-bounce > span:nth-child(3){
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  background: var(--white);
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1.2em);
+    transform: translateY(-1.2em);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1.2em);
+    transform: translateY(-1.2em);
+  }
+}
+
+#fullpage {
+  margin-left: 250px;
+  z-index: 99;
+}
+
+
+/*==============================================
+  02. HEADER CSS
+================================================*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  padding: 0 15px;
+  background: var(--back-primary);
+  transition: all ease-in-out 0.5s;
+  z-index: 999;
+}
+.container-fluid {
+  padding: 0 15px;
+}
+a#logo-mobile {
+  display: none;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar {
+  padding: 0;
+  justify-content: center;
+}
+.navbar-toggle {
+  display: none;
+}
+#header .profile img {
+  display: block;
+  width: 140px;
+  margin: 35px auto 10px;
+  border: 8px solid var(--back-secondary);
+}
+a#logo-desktop {
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#header .profile .social-links a {
+  display: inline-block;
+  width: 36px;
+  margin-right: 4px;
+  padding: 8px 0;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  background: var(--back-secondary);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#header .profile .social-links a:hover {
+  text-decoration: none;
+  background: var(--color-secondary);
+}
+.navbar-nav {
+  padding: 23px 10px 0;
+}
+.navbar-nav li {
+  position: relative;
+  white-space: nowrap;
+}
+.navbar-nav li a {
+  display: block;
+  padding: 10px 12px;
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.9;
+}
+.navbar-nav li a:after {
+  content:'';
+  display:block;
+  height: 2px;
+  background:var(--color-primary);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  margin-top: 4px;
+}
+.navbar-nav li a:hover:after, .navbar-nav li.active a:after{
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+.navbar-nav li a:hover {
+  opacity: 1;
+}
+.navbar-nav li.active a {
+  opacity: 1;
+  color: var(--white);
+}
+.collapse:not(.show) {
+  display: block;
+}
+.footer {
+  bottom: 0;
+  padding: 35px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.footer .copyright {
+  text-align: center;
+}
+.footer .copyright strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer .credits {
+  padding-top: 5px;
+  color: var(--gray);
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/*==============================================
+  03. WELCOME BLOCK CSS
+================================================*/
+.welcome-box {
+  font-family: var(--font-secondary);
+  font-size: 20px;
+  line-height: 1.7;
+}
+.welcome-first {
+  display: block;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.welcome-title {
+  margin-top: 18px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.welcome-title span {
+  color: var(--color-primary);
+  letter-spacing: 0px;
+}
+.welcome-subtitle {
+  font-size: 26px;
+}
+.welcome-box p {
+  max-width: 620px;
+  width:100%;
+  margin:0 auto 30px;
+  color: var(--white);
+}
+.welcome-box .btn {
+  margin-top: 10px;
+}
+.next-section {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.next-section span {
+  margin-top: 15px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+.next-section i:hover {
+  opacity: 1;
+}
+
+
+/*==============================================
+  04. ABOUT ME BLOCK CSS
+================================================*/
+.about-img {
+  position: relative;
+  margin: 0 auto 40px;
+}
+.about-img img {
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 0 40px rgba(0,0,0,.3);
+}
+.about-contentbox {
+  text-align: left;
+  line-height: 1.8;
+}
+.about-contentbox span {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.about-contentbox h2 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.facts-list {
+  margin-top: 20px;
+}
+.facts-list .item {
+  display: inline-block;
+  width: 100%;
+  padding: 25px 20px 15px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.facts-list .item:hover {
+  color: var(--back-primary);
+  background: var(--white);
+}
+.counter-box span {
+  display: block;
+  margin: 15px 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: none;
+}
+.counter-icon {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+.facts-list .owl-dots {
+  margin-bottom: 30px;
+}
+
+
+/*==============================================
+  05. SKILLS BLOCK CSS
+================================================*/
+.title-block {
+  margin-bottom: 40px;
+}
+.title-block span {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.skills-row {
+  margin-top: 50px;
+}
+.skill-item {
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(250,250,250,0.1);
+}
+.last-skill {
+  border-bottom: none;
+}
+.skills-row span {
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  color: var(--back-primary);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  z-index: 999;
+}
+.skill-info {
+  display: flex;
+  width: 150px;
+  margin-left: auto;
+  margin-bottom: -10px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.skill-info-block {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-info-block + .skill-info-block {
+  margin-left: 40px;
+}
+.skill-info-block h6 {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.skill-info-block img {
+  display: flex !important;
+  width: auto !important;
+  height: 28px;
+  width: 28px;
+}
+.skill-bar {
+  position: relative;
+  top: -15px;
+  width: 70%;
+  height: 6px;
+  background-color: var(--color-auxiliar);
+  border-radius: 3px;
+  overflow: visible;
+}
+.skill-progress-bar {
+  height: 100%;
+  background: var(--white);
+  border-radius: 3px;
+  transition: width 1.5s ease-in-out;
+  -webkit-transition: width 1.5s ease-in-out;
+  -ms-transition: width 1.5s ease-in-out;
+  -moz-transition: width 1.5s ease-in-out;
+  -o-transition: width 1.5s ease-in-out;
+}
+
+
+/*==============================================
+  06. EDUCATION BLOCK CSS
+================================================*/
+.education-pin-right {
+  display: flex;
+  margin-bottom: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+.education-pin-left {
+  display: flex;
+  margin-bottom: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.education-icon {
+  width: 50px;
+  height: 50px;
+  color: var(--back-secondary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+.education-timeline-right {
+  display: inline-block;
+  height: 4px;
+  width: calc(50% - 15px);
+  background: var(--white);
+}
+.education-timeline-left {
+  display: inline-block;
+  height: 4px;
+  width: calc(50% - 25px);
+  background: var(--white);
+}
+.education-list .owl-item {
+  margin-right: 0px !important;
+}
+.owl-item > div {
+  width: 100%;
+}
+.education-list p {
+  font-size: 13px;
+}
+.education-list .item {
+  height: calc(100% - 100px);
+  margin: 0 30px;
+  background-color: var(--color-auxiliar);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+.education-list .item:hover {
+  background-color: var(--white);
+  color: var(--back-primary);
+}
+.education-box {
+  height: 100%;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+.education-box h3 {
+  margin-bottom: 5px;
+  padding: 10px 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.education-box h4 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-transform: none;
+}
+.education-box h5 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.education-box h6 {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.owl-carousel .owl-dots .owl-dot {
+  border-radius: 3px;
+}
+.owl-dots {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  margin-top: 50px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.owl-carousel .owl-dots .owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, .2);
+}
+.owl-carousel .owl-dots .owl-dot:focus {
+    outline: none;
+}
+.owl-carousel .owl-dots .owl-dot.active {
+    background: var(--white);
+}
+
+
+/*==============================================
+  07. EXPERIENCE BLOCK CSS
+================================================*/
+.experience-section .item {
+  padding: 30px 40px;
+  background-color: rgba(250,250,250,0.25);
+  border-radius: 10px;
+}
+.experience-section .item img {
+  margin: 10px auto 0;
+  width: 70%;
+  max-height: 120px;
+  border-radius: 10px;
+}
+.experience-section .item h6 {
+  margin-top: 15px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+}
+.experience-section .item h4 {
+  margin: 18px 0 8px;
+  font-size: 23px;
+  text-transform: none;
+  font-weight: 700;
+}
+.experience-section .item h5 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.experience-section .item p {
+  font-size: 15px;
+}
+
+
+/*==============================================
+  08. PROJECTS BLOCK CSS
+================================================*/
+.gallery-section {
+  text-align: center;
+}
+.portfolio-item img {
+  position: relative;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 9;
+}
+.portfolio-item .thumb-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  text-align: left;
+  background-color: var(--back-auxiliar);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  z-index: 99;
+}
+.portfolio-item:hover .thumb-inner {
+  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(250,250,250,0.9);
+}
+.portfolio-item .thumb-inner h4 {
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.portfolio-item:hover .thumb-inner h4 {
+  margin-top: 26%;
+  color: var(--back-primary);
+  margin-bottom: 20px;
+}
+.portfolio-item .thumb-inner p {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin-bottom: 0px;
+}
+.portfolio-item:hover .thumb-inner p {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  color: var(--back-secondary);
+}
+.portfolio-btns {
+  visibility: hidden;
+  opacity: 0;
+}
+.portfolio-item:hover .portfolio-btns {
+  display: flex;
+  position: relative;
+  margin-top: 20%;
+  justify-content: space-between;
+  visibility: visible;
+  opacity: 1;
+}
+.portfolio-btns .btn {
+  padding: 0 35px;
+  font-size: 12px;
+  line-height: 40px;
+}
+.btn-demo {
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+.btn-demo:hover {
+  background-color: var(--color-secondary);
+}
+.btn-repo {
+  border: 1px solid var(--back-primary);
+}
+.btn-repo:hover {
+  background-color: var(--back-auxiliar);
+  border: none;
+}
+
+
+/*==============================================
+  09. CONTACT BLOCK CSS
+================================================*/
+::-webkit-input-placeholder {
+  color:var(--white) !important;
+  opacity:1;
+}
+::-moz-placeholder {
+  color:var(--white) !important;
+  opacity:1;
+}
+:-ms-input-placeholder {
+  color:var(--white) !important;
+  opacity:1;
+}
+:-moz-placeholder {
+  color:var(--white) !important;
+  opacity:1;
+}
+.input-field {
+  margin-bottom:15px;
+}
+.form-control {
+  height: 50px;
+  color:var(--white);
+  border: none;
+  background:rgba(250,250,250,0.05);
+  border: 1px solid rgba(250,250,250,0.5);
+  border-radius: 10px;
+  padding:4px 22px;
+  font-size:14px;
+  margin-bottom: 30px;
+}
+.form-control:focus {
+  box-shadow:none;
+  outline:none;
+  background:rgba(0,0,0,0.05);
+  border: 1px solid rgba(250,250,250,1);
+  color:var(--white);
+}
+.index .form-control.form-control-dark {
+  background: rgba(250,250,250, 0.75);
+  color: var(--white);
+}
+.index .form-control.form-control-dark:focus {
+  background: rgba(54, 40, 158, 0.85);
+  color: var(--white);
+}
+.index .form-control.form-control-dark::-webkit-input-placeholder {
+  color: var(--white) !important;
+}
+.index .form-control.form-control-dark::-moz-placeholder {
+  color:var(--white) !important;
+}
+.index .form-control.form-control-dark:-ms-input-placeholder {
+  color:var(--white) !important;
+}
+.index .form-control.form-control-dark:-moz-placeholder {
+  color:var(--white) !important;
+}
+.form-control.form-control-dark:focus {
+  background: rgba(0, 0, 0, 0.2);
+}
+.form-control.form-control-dark {
+  background: rgba(0, 0, 0, 0.1);
+  color: #222;
+  border: none;
+}
+.form-control.form-control-dark::-webkit-input-placeholder {
+  color:#222 !important;
+  opacity:0.7;
+}
+.form-control.form-control-dark::-moz-placeholder {
+  color:#222 !important;
+  opacity:0.7;
+}
+.form-control.form-control-dark:-ms-input-placeholder {
+  color:#222 !important;
+  opacity:0.7;
+}
+.form-control.form-control-dark:-moz-placeholder {
+  color:#222 !important;
+  opacity:0.7;
+}
+textarea.form-control {
+  height: 123px;
+  padding-top: 15px;
+}
+.contact-section .row div {
+  display: block;
+  margin: 0 auto;
+}
+.contact-section .btn {
+  width: 100%;
+}
+.contact-box {
+  text-align: left;
+}
+.contact-box h4 {
+  font-size: 24px;
+}
+.contact-box h4:after {
+  content:'';
+  display:block;
+  width:50px;
+  height:2px;
+  background: var(--white);
+  margin:12px 0;
+}
+.contact-row {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  margin-bottom: 30px;
+  padding: 30px;
+  font-weight: 700;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  background: var(--color-auxiliar);
+  border-radius: 10px;
+}
+.contact-row i {
+  display: block;
+  width: 55px;
+  font-size: 30px;
+}
+.contact-row i.fa-envelope {
+  font-size: 25px;
+}
