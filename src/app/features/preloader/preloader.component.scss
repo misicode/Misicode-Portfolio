@@ -10,15 +10,16 @@ $face-show-delay: 2s;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
 }
-.ear {
+.ears {
+  animation: show $part-ani-duration linear $ear-show-delay forwards;
   opacity: 0;
 }
 .ear-left {
-  animation: show $part-ani-duration linear $ear-show-delay forwards, moveleft $part-ani-duration linear $ear-move-delay forwards;
+  animation: moveleft $part-ani-duration linear $ear-move-delay forwards;
   margin-left: 1.25rem;
 }
 .ear-right {
-  animation: show $part-ani-duration linear $ear-show-delay forwards, moveright $part-ani-duration linear $ear-move-delay forwards;
+  animation: moveright $part-ani-duration linear $ear-move-delay forwards;
   margin-right: 1.25rem;
 }
 .face {
