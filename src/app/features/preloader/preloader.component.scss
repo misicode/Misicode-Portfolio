@@ -14,11 +14,11 @@ $face-show-delay: 2s;
   opacity: 0;
 }
 .ear-left {
-  animation: show $part-ani-duration linear $ear-show-delay forwards, move-left $part-ani-duration linear $ear-move-delay forwards;
+  animation: show $part-ani-duration linear $ear-show-delay forwards, moveleft $part-ani-duration linear $ear-move-delay forwards;
   margin-left: 1.25rem;
 }
 .ear-right {
-  animation: show $part-ani-duration linear $ear-show-delay forwards, move-right $part-ani-duration linear $ear-move-delay forwards;
+  animation: show $part-ani-duration linear $ear-show-delay forwards, moveright $part-ani-duration linear $ear-move-delay forwards;
   margin-right: 1.25rem;
 }
 .face {
@@ -35,7 +35,7 @@ $face-show-delay: 2s;
     stroke-dashoffset: 0;
   }
 }
-@keyframes move-left {
+@keyframes moveleft {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
@@ -43,7 +43,7 @@ $face-show-delay: 2s;
     transform: translate(-.6rem, -2rem) rotate(10deg);
   }
 }
-@keyframes move-right {
+@keyframes moveright {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
