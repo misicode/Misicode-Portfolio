@@ -5,6 +5,4 @@ import { Component } from "@angular/core";
   templateUrl: "./preloader.component.html",
   styleUrl: "./preloader.component.scss",
 })
-export class PreloaderComponent {
-  
-}
+export class PreloaderComponent {}

@@ -25,7 +25,6 @@ $face-show-delay: 2s;
 .face {
   animation: show $part-ani-duration linear $face-show-delay forwards;
   opacity: 0;
-  position: fixed;
 }
 
 @keyframes draw {

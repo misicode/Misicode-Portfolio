@@ -11,9 +11,13 @@ module.exports = {
           500: "#EE2CFF",
         },
         secondary: {
-          800: "#24213B",
+          700: "#100A34",
+          800: "#0E092D",
           900: "#0A0521",
         },
+      },
+      fontFamily: {
+        "rubik": "Rubik, sans-serif",
       }
     },
   },

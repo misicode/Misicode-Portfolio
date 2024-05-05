@@ -1,1 +1,5 @@
-<app-preloader></app-preloader>
+@defer (on timer(4s)) {
+  <app-main-layout></app-main-layout>
+} @placeholder {
+  <app-preloader></app-preloader>
+}
