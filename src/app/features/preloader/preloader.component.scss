@@ -4,6 +4,8 @@ $part-ani-duration: .5s;
 $ear-show-delay: 1.25s;
 $ear-move-delay: 1.875s;
 $face-show-delay: 2s;
+$logo-hide-duration: .3s;
+$logo-hide-delay: 3s;
 
 .sign path {
   animation: draw $sign-draw-duration linear $sign-draw-delay forwards;
@@ -25,6 +27,9 @@ $face-show-delay: 2s;
 .face {
   animation: show $part-ani-duration linear $face-show-delay forwards;
   opacity: 0;
+}
+.logo {
+  animation: hide $logo-hide-duration linear $logo-hide-delay forwards;
 }
 
 @keyframes draw {
@@ -57,5 +62,15 @@ $face-show-delay: 2s;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
   }
 }
