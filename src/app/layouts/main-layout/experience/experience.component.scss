@@ -1,0 +1,4 @@
+li::before {
+  content: "▹";
+  @apply absolute font-semibold left-0 text-base text-primary-500;
+}
