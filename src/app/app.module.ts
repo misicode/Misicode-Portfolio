@@ -7,6 +7,7 @@ import { ExperienceComponent } from "./layouts/main-layout/experience/experience
 import { HeaderComponent } from "./layouts/main-layout/header/header.component";
 import { MainLayoutComponent } from "./layouts/main-layout/main-layout.component";
 import { PreloaderComponent } from "./features/preloader/preloader.component";
+import { ProjectsComponent } from "./layouts/main-layout/projects/projects.component";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -18,6 +19,7 @@ import { AppRoutingModule } from "./app-routing.module";
     HeaderComponent,
     MainLayoutComponent,
     PreloaderComponent,
+    ProjectsComponent,
   ],
   imports: [
     AppRoutingModule,
