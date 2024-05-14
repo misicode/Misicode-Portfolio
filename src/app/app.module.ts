@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AboutMeComponent } from "./layouts/main-layout/about-me/about-me.component";
@@ -23,6 +24,7 @@ import { AppRoutingModule } from "./app-routing.module";
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
   ],
   providers: [],

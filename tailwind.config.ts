@@ -20,7 +20,10 @@ module.exports = {
       },
       fontFamily: {
         "rubik": "Rubik, sans-serif",
-      }
+      },
+      screens: {
+        "3xl": "2048px",
+      },
     },
   },
   plugins: [],
