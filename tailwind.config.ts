@@ -8,14 +8,15 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          500: "#EE2CFF",
-          600: "#EC00FE",
-          700: "#D900EA",
+          400: "#C73BFF",
+          500: "#C020FF",
+          600: "#BB11FF",
+          700: "#B300FA",
         },
         secondary: {
-          700: "#170E3A",
-          800: "#120B2B",
-          900: "#0D081E",
+          700: "#1D153F",
+          800: "#120E2C",
+          900: "#0D0A20",
         },
       },
       fontFamily: {

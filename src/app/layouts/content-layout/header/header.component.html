@@ -1,37 +1,43 @@
 <header [@enter] class="flex flex-col h-full justify-between max-w-[36rem] ml-auto pl-16 pr-14 py-20">
   <div>
     <div class="flex h-56 items-center justify-center mb-12 relative">
-      <div class="absolute animate-spin border-code border-primary-700 h-60 rounded-full w-60"></div>
+      <div class="absolute animate-spin border-code border-primary-700 h-64 rounded-full w-64"></div>
       <img class="rounded-full w-56" src="./assets/osaka.webp" />
     </div>
     <h1 class="font-semibold text-5xl">
       Alessandra Mincia
     </h1>
-    <p class="font-medium font-mono mt-2 text-2xl text-primary-500">
+    <p class="font-medium font-mono mt-2 text-2xl text-primary-400">
       Software Developer
     </p>
-    <p class="mt-5 text-zinc-400">
+    <p class="mt-5 text-gray-400">
       Me dedico al desarrollo, y ocasionalmente al diseño, de <span class="text-white">aplicaciones web</span>
       principalmente del lado backend con <span class="text-white">Spring Boot</span>
       y aprendiendo del lado frontend con <span class="text-white">Angular</span>.
     </p>
     <nav class="mt-16">
-      <ul class="font-medium text-sm text-zinc-400">
+      <ul class="font-medium text-sm text-gray-300">
         <li class="py-2.5">
-          <a class="flex group items-center">
-            <span class="bg-zinc-500 group-focus-visible:bg-zinc-200 group-focus-visible:w-16 group-hover:bg-zinc-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
+          <a class="flex group items-center" routerLink="./">
+            <span class="bg-gray-500 group-focus-visible:bg-gray-200 group-focus-visible:w-16 group-hover:bg-gray-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
+            <span class="group-focus-visible:text-white group-hover:text-white">INICIO</span>
+          </a>
+        </li>
+        <li class="py-2.5">
+          <a class="flex group items-center" routerLink="./about-me">
+            <span class="bg-gray-500 group-focus-visible:bg-gray-200 group-focus-visible:w-16 group-hover:bg-gray-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
             <span class="group-focus-visible:text-white group-hover:text-white">ACERCA DE MÍ</span>
           </a>
         </li>
         <li class="py-2.5">
-          <a class="flex group items-center">
-            <span class="bg-zinc-500 group-focus-visible:bg-zinc-200 group-focus-visible:w-16 group-hover:bg-zinc-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
+          <a class="flex group items-center" routerLink="./jobs">
+            <span class="bg-gray-500 group-focus-visible:bg-gray-200 group-focus-visible:w-16 group-hover:bg-gray-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
             <span class="group-focus-visible:text-white group-hover:text-white">EXPERIENCIA</span>
           </a>
         </li>
         <li class="py-2.5">
-          <a class="flex group items-center">
-            <span class="bg-zinc-500 group-focus-visible:bg-zinc-200 group-focus-visible:w-16 group-hover:bg-zinc-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
+          <a class="flex group items-center" routerLink="./projects">
+            <span class="bg-gray-500 group-focus-visible:bg-gray-200 group-focus-visible:w-16 group-hover:bg-gray-200 group-hover:w-16 h-0.5 inline-block mr-4 transition-all w-8"></span>
             <span class="group-focus-visible:text-white group-hover:text-white">PROYECTOS</span>
           </a>
         </li>
@@ -39,7 +45,7 @@
     </nav>
   </div>
   <div>
-    <div class="flex font-mono items-center justify-center mb-5 text-center text-sm text-zinc-400">
+    <div class="flex font-mono items-center justify-center mb-5 text-center text-sm text-gray-300">
       <svg
         height="14"
         viewBox="0 0 24 24"
@@ -53,9 +59,7 @@
       <p class="mx-2">
         Learning and programming <span class="font-semibold">|</span> Coded by
       </p>
-      <a class="duration-200 ease-in hover:text-primary-500 text-white" href="https://misicode.netlify.app" rel="noreferrer noopener" target="_blank">
-        <span>MISICODE</span>
-      </a>
+      <span class="text-primary-400 tracking-wide">MISICODE</span>
     </div>
     <div class="flex justify-center">
       <a class="duration-200 ease-in hover:text-primary-500 mr-4" href="https://github.com/misicode" rel="noreferrer noopener" target="_blank">

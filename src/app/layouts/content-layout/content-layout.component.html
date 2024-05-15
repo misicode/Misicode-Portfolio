@@ -1,10 +1,8 @@
 <div class="bg-secondary-700 grid grid-cols-[4.5fr_7.5fr] text-white">
   <app-header class="bg-secondary-800 fixed h-screen w-[37.5%]"></app-header>
   <main class="col-[2_/_3] z-10">
-    <div class="max-w-[64rem] mr-auto pl-56 pr-16 py-20 3xl:max-w-[74rem]">
-      <app-about-me></app-about-me>
-      <app-experience></app-experience>
-      <app-projects></app-projects>
+    <div class="max-w-[64rem] mr-auto pl-56 pr-16 3xl:max-w-[74rem]">
+      <router-outlet></router-outlet>
     </div>
   </main>
 </div>

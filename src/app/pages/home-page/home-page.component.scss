@@ -1,0 +1,46 @@
+$cursor-color: currentColor;
+
+.typewriter {
+  &::before {
+    animation: typing 5s 1s infinite;
+    content: "";
+  }
+  &::after {
+    animation: blink .725s linear infinite;
+    border-right: 1px solid $cursor-color;
+    content: "";
+  }
+  &.thick::after {
+    border-right: 1rem solid $cursor-color;
+  }
+}
+
+@keyframes typing {
+  00.0000%, 77.3488% { content: ""; }
+  03.1395%, 75.2093% { content: "M"; }
+  06.2791%, 73.0698% { content: "MI"; }
+  09.4186%, 70.9302% { content: "MIS"; }
+  12.5581%, 68.7907% { content: "MISI"; }
+  15.6977%, 66.6512% { content: "MISIC"; }
+  18.8372%, 64.5116% { content: "MISICO"; }
+  21.9767%, 62.3721% { content: "MISICOD"; }
+  25.1163%, 60.2326% { content: "MISICODE"; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  .typewriter::before {
+    animation: sequencePopup 0s linear infinite;
+    content: "MISICODE";
+  }
+
+  @keyframes sequencePopup {
+    0%, 100% { content: "MISICODE"; }
+  }
+}
