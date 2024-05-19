@@ -3,3 +3,44 @@
   border-style: outset;
   border-width: 8px;
 }
+.nav-option a, .nav-option .arrow {
+  transition: grid-template-columns 0.3s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.nav-option:not(:hover) .arrow {
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out, visibility 0.15s ease-in-out;
+}
+.nav-option:hover a, .nav-option .active-link {
+  grid-template-columns: 4.25rem auto;
+
+  & > span {
+    @apply text-white;
+  }
+}
+.nav-option:hover .arrow, .nav-option .active-link .arrow {
+  @apply font-semibold text-primary-500;
+  animation: move .75s infinite alternate ease-in-out;
+
+  &:nth-child(n+2) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.nav-option .arrow {
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 400;
+
+  &:nth-child(n+2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(8px);
+  }
+}

@@ -8,7 +8,7 @@ import { ProjectsPageComponent } from "./projects-page/projects-page.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "home",
     component: HomePageComponent
   },
   {
@@ -22,6 +22,11 @@ const routes: Routes = [
   {
     path: "projects",
     component: ProjectsPageComponent
+  },
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full"
   }
 ];
 
